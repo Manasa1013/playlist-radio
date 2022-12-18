@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+:root {
+  --primary-white: rgb(239, 239, 239);
+  --primary-black: rgb(36, 41, 46);
+  --primary-background: rgb(229, 231, 235);
+  --secondary-background: rgb(203, 240, 248);
+  --pastel-blue: rgb(154, 208, 236);
+  --primary-text: rgb(50, 49, 48);
+  --secondary-text: rgb(100, 116, 139);
+  --tw-text-opacity: 1;
+  --blue: rgb(37, 100, 207);
+  --secondary-blue: rgb(0, 120, 212);
+  --secondary-white: rgb(151, 107, 31);
+  --error-red: red;
+  --light-emerald: #4ade80;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: "Pacifico", cursive, Impact, Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+  color: var(--primary-white);
+}
+
+.flex-center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header {
+  margin: 0;
+  text-align: center;
+  color: var(--primary-white);
+  background-color: var(--primary-black);
+}
+
+.app-body {
+  margin: 0rem 2rem 0rem 2rem;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+}
+
+.post {
+  border: 1px solid var(--primary-white);
+  /* border: 1px solid red; */
+  padding: 1rem;
+  margin: 1rem;
+  height: auto;
+  width: 100%;
+  margin: 0 0.5rem;
+}
+
+.post .caption {
+  font-size: 1.2rem;
+}
+
+.post .reaction {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+}
+
+.button__floating {
+  background: var(--primary-black);
+  margin: 1rem 0 0 0;
+  font-weight: 700;
+  font-size: large;
+  border-radius: 50%;
+  padding: 0.7rem 1rem;
+  color: var(--primary-white);
+  border: 1px solid transparent;
+}
+
+.button__floating:active {
+  transform: translateY(3px) rotate(180deg);
+  transition: all 0.3s ease-in;
+}
+
+.button {
+  border-radius: 0.125rem;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0.75rem;
+  font-size: 550;
+}
+
+.button__primary {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}
+
+.button__secondary {
+  color: var(--primary-white);
+  background-color: none;
+}
+
+.button__Link {
+  color: var(--primary-black);
+  height: auto;
+}
+
+.button__Link:hover {
+  text-decoration: underline;
+}
+
+.input-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.125rem;
+  display: flex;
+  border: none;
+  max-width: 100%;
+  align-self: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: small;
+}
+
+.dropdown-container {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 0.125rem;
+}
+
+.dropdown {
+  padding: 0.5rem;
+}
+
+.edit-post--container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification__container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notification__caption {
+  font-size: x-small;
+  font-weight: 350;
+  color: grey;
+}
+
+.notification__time {
+  color: #868f90;
+  font-size: xx-small;
+  display: inline;
+  letter-spacing: 0%;
+}
+
+.notification {
+  border: 1px solid #b7c2be39;
+  border-radius: 0.125rem;
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav--container {
+  box-sizing: border-box;
+}
+
+.nav--links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: var(--primary-black);
+  margin: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .nav--links {
+    flex-direction: row;
+  }
+
+  .post {
+    width: 100%;
+    height: auto;
+  }
+
+  .post-container {
+    width: 100%;
+    height: auto;
+  }
+}
